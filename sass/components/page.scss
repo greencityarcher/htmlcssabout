@@ -1,0 +1,56 @@
+.page{
+  min-height: 70vh;
+  &__section-container{
+    @media (min-width:#{$desktop}){
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  &__section-header{
+    color: $col-7;
+  }
+  &__section{
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 3px solid $col-8;
+    @media (min-width:#{$desktop}){
+      width: 45%;
+    }
+  }
+  &__chapters-list{
+    display: inline-block;
+    color: $col-7;
+  }
+  &__chapters-list-item{
+    margin-bottom: 10px;
+    &:hover{
+      color: $col-11;
+    }
+  }
+  &__chapter-link{
+    position: relative;
+    color: $col-7;
+    text-decoration: none;
+    &::after{
+      content:"";
+      display: inline;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      border-bottom: 1px solid $col-11;
+      transform: scaleX(0);
+      transition: all .3s;
+    }
+
+    &:hover{
+      color: $col-11;
+      &::after{
+        transform: scaleX(1);
+      }
+    }
+  }
+}

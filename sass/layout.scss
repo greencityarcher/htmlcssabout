@@ -1,0 +1,30 @@
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: $col-9;
+  color: $col-7;
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: Verdana, Geneva, sans-serif
+}
+h1{
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.5;
+}
+h2{
+  font-weight: 400;
+}
+.container{
+  width: calc(100% - 30px);
+  margin: 0 15px;
+  @media (min-width: #{$tablet}){
+    width: calc(100% - 140px);
+    margin: 0 70px;
+  }
+}
+.about{
+  font-style: italic;
+  font-size: 18px;
+}

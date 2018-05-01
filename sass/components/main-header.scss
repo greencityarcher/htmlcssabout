@@ -1,0 +1,38 @@
+.main-header{
+  min-height: 15vh;
+  background-image: linear-gradient($col-8, $col-9);
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    transition: all .5s;
+    @media (min-width: #{$tablet}){
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__text{
+    width: 100%;
+    order: 1;
+    text-align: center;
+    @media (min-width: #{$tablet}){
+      text-align: left;
+      width: 70%;
+    }
+    @media (min-width: #{$desktop}){
+      width: 80%;
+    }
+  }
+  &__picture{
+    box-sizing: border-box;
+    order: 2;
+    position: relative;
+    width: 100%;
+    min-height: 110px;
+    @media (min-width: #{$tablet}){
+      width: 30%;
+    }
+    @media (min-width: #{$desktop}){
+      width: 20%;
+    }
+  }
+}
